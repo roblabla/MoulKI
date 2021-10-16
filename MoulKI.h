@@ -51,6 +51,7 @@ public:
     } Keys;
 
     QString Host;
+    short Port;
 
 private:
     Ui::MoulKIClass *ui;
