@@ -18,7 +18,7 @@ void qtAuthClient::startLogin(QString user, QString pass) {
     this->user = user.toLower().toUtf8().constData();
     this->pass = pass.toUtf8().constData();
     setStatus("Connecting...");
-    if(pnAuthClient::connect(parent->Host.toStdString().data()) != kNetSuccess) {
+    if(pnAuthClient::connect(parent->Host.toStdString().data(), parent->Port) != kNetSuccess) {
         setStatus("Error Connecting To Server");
         return;
     }
