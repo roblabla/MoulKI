@@ -169,6 +169,7 @@ void MoulKI::login(QString user, QString pass, QString iniFilename) {
             Keys.Game.G = g;
     }
     Host = ini["Server.Auth.Host"][0];
+    Port = ini["Server.Port"][0].toInt();
 
     if(gameClient != NULL) {
         logoutActivePlayer();
