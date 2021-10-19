@@ -63,8 +63,9 @@ jobs:
       - name: Checkout HSPlasma
         uses: actions/checkout@v2
         with:
-          repository: H-uru/libhsplasma
+          repository: roblabla/libhsplasma
           path: libhsplasma
+          ref: missing-msgs
 
       - name: Build libHSPlasma
         run: |
