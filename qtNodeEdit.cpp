@@ -337,7 +337,7 @@ void qtNodeEdit::update(bool sdlEdit) {
                         ui->SDLTreeView->expand(sdlModel->index(0, 0, QModelIndex()));
                         connect(sdlModel, SIGNAL(sdlEdited(plStateDataRecord*)), this, SLOT(editSDL(plStateDataRecord*)));
                     } catch (const hsException& e) {
-                        qWarning("Exception reading SDL Blob: %s", e.what());
+                        qWarning("Exception reading SDL Blob: %s in %s:%d", e.what(), e.File(), e.Line());
                         ui->SDLTreeView->setModel(0);
                         ui->SDLTreeView->setEnabled(false);
                     }
